@@ -7,7 +7,8 @@ reg signed [17:0] x_in;
 wire signed [17:0] y;
 wire out;
 
-localparam PERIOD = 10;
+//localparam PERIOD = 10;
+localparam PERIOD = 1000; //1 MHz = 1000 ns
 localparam RESET_DELAY = 2;
 localparam RESET_LENGTH = 21;
 
@@ -16,10 +17,17 @@ initial
 begin
     clk = 0;
     forever begin
-    #(PERIOD/2);
-    clk=~clk;
+        #(PERIOD/2);
+        clk=~clk;
     end
 end
+
+// Another clock gen
+//initial
+//    clk=0;
+//
+//always 
+//    #(PERIOD) clk = ~clk;
 
 initial begin
     repeat (PERIOD) @(posedge clk)

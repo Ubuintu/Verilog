@@ -10,7 +10,7 @@ proc getScriptDirectory {} {
     return $scriptFolder
 }
 
-set SIM_LEN 1000ns
+set SIM_LEN 100000ns
 set SRC_DIR [getScriptDirectory]
 set TB_MOD "DUT_tb"
 set DUT "button_conditioner"
