@@ -2,6 +2,7 @@
 # Variables here
 ####################################
 set SIMLEN 1000ns
+set UNITS 
 
 ####################################
 # Procedure 
@@ -14,6 +15,9 @@ proc printTxt {msg} {
     puts "@${now} ${UNITS}: ${msg}"
 }
 
+####################################
+# Main 
+####################################
 onerror {resume}
 transcript on
 

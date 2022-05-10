@@ -2,7 +2,7 @@
 module DUT_tb;
 
 //Same scope as parameter but cannot be changed from outside
-localparam WIDTH=5;   //width of regs required
+localparam WIDTH=4;   //width of regs required
 localparam PERIOD=10; //10ns = 10000MHz
 
 //for all DUTs
@@ -37,7 +37,7 @@ end
 
 
 //instantiate DUT
-counter #( .WIDTH(WIDTH), .INCR(1) ) DUT
+counter #( .WIDTH(WIDTH), .INCR(2) ) DUT
     (
     .*
     );
