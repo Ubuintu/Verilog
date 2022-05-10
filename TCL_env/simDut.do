@@ -35,14 +35,23 @@ vsim -t 1ns -L work DUT_tb
 
 do waveCNT.do
 
-printTxt $UNITS
-run ${SIMLEN}
+####################################
+# Simulation 
+####################################
+echo \n\n\n\n
+puts "\n\n\n\n"
 
+# Should try force -deposit when MS gives redline initially
+force sim:/DUT_tb/DUT/load 1 0 -cancel 10
+run 100ns
+force -freeze sim:/DUT_tb/DUT/load 1 {@ 300 ns} -cancel {@ 310 ns}
+force -freeze sim:/DUT_tb/DUT/data_in 1 {@ 300 ns} -cancel {@ 310 ns}
+run 300ns
+
+#run ${SIMLEN}
 
 
 ####################################
 # Procedure calls
 ####################################
-echo \n
-puts "\n"
 printTxt "Hello world"

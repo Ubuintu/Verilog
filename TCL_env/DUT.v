@@ -17,7 +17,6 @@ module counter #(parameter WIDTH=5,
         else if (load)
             out<=data_in;
         else
-            //out<=out+{ {WIDTH-INCR{1'd0}},{INCR{1'd1}} };
             out<=out+INCR;
 
 endmodule

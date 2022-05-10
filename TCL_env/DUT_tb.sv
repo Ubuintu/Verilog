@@ -37,7 +37,7 @@ end
 
 
 //instantiate DUT
-counter #( .WIDTH(WIDTH), .INCR(2) ) DUT
+counter #( .WIDTH(WIDTH), .INCR(1) ) DUT
     (
     .*
     );
