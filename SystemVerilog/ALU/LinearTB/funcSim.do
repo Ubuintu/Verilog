@@ -126,3 +126,12 @@ printTxt $string
 printTxt $separator
 puts "\n\n"
 echo \n\n
+
+force sim:/DUT_tb/DUT/alu_a_in 8'h4 {@280ns}
+force sim:/DUT_tb/DUT/alu_b_in 8'h4 {@280ns}
+force sim:/DUT_tb/DUT/alu_opcode_in 4'd2 {@280ns}
+run {@280ns}
+printTxt "simple case"
+force sim:/DUT_tb/DUT/alu_a_in 8'h0 {@320ns}
+force sim:/DUT_tb/DUT/alu_b_in 8'h0 {@320ns}
+run {@350ns}
