@@ -74,6 +74,7 @@ run @${curTime}ns
 #printTxt $curTime
 
 # demonstrating force with deposit option; note: deposit will drive a value and hold it until it is overwritten by anything
+# WIP: not sure if syntax works for abs time
 force -deposit sim:/DUT_tb/DUT/alu_a_in 0 @${curTime}ns 
 set curTime [expr $curTime + 5]
 force -deposit sim:/DUT_tb/DUT/alu_b_in 0 @${curTime}ns 
@@ -143,6 +144,7 @@ run {@350ns}
 printTxt "simple case"
 force sim:/DUT_tb/DUT/alu_a_in 8'h0 {@375ns}
 force sim:/DUT_tb/DUT/alu_b_in 8'h0 {@375ns}
+force sim:/DUT_tb/DUT/alu_opcode_in 4'd0 {@375ns}
 run {@375ns}
 force sim:/DUT_tb/DUT/alu_a_in 8'h0 0
 force sim:/DUT_tb/DUT/alu_b_in 8'h0 0
@@ -160,8 +162,14 @@ echo \n\n
 force sim:/DUT_tb/DUT/alu_a_in 8'h0F 0
 force sim:/DUT_tb/DUT/alu_b_in 8'h03 0
 force sim:/DUT_tb/DUT/alu_opcode_in 4'd3 0 
-run {@450ns}
+run {@430ns}
 printTxt "simple case"
 force sim:/DUT_tb/DUT/alu_a_in 8'h0 0
-force sim:/DUT_tb/DUT/alu_b_in 8'h0 0
-run 10
+force sim:/DUT_tb/DUT/alu_b_in 8'h1 0
+force sim:/DUT_tb/DUT/alu_a_in 8'h08 {@450ns} 
+force sim:/DUT_tb/DUT/alu_b_in 8'h04 {@450ns}
+run {@510ns}
+printTxt "complex case"
+force sim:/DUT_tb/DUT/alu_a_in 8'hFF 0
+force sim:/DUT_tb/DUT/alu_b_in 8'h25 0
+run {@600ns}
