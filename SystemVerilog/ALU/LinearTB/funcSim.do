@@ -16,8 +16,89 @@ proc getScriptDirectory {} {
     return $scriptFolder
 }
 
+proc getArgs {} {
+    global argv
+    global 1
+    global 2
+    global 3
+    global 4
+    global 5
+    global argc
+
+    # WIP; argc doesnt exist
+    set MSG "No arguements entered"
+    if {$argc==0} {
+        printTxt $MSG
+    } else {
+
+        set MSG "Number of arguments: "
+        append MSG $argc
+        append MSG "\nArguments are: "
+        printTxt $MSG
+
+        # Currently doesn't work
+#        for {set i 0} {$i < $argc} {incr i} {
+#             printTxt [lindex $argv $i]              
+#        }
+
+        foreach arg $argv {
+            printTxt "inside foreach"
+            printTxt $arg
+        }
+        
+        # Modelsim does not allow argv simulator state variable, see microsemi doc
+        switch $argc {
+            1 {
+                printTxt "Inside switch statement"
+                printTxt "Arg1: $1"
+            }
+            2 {
+                printTxt "Inside switch statement"
+                printTxt "Arg1: $1"
+                printTxt "Arg2: $2"
+            }
+            3 {
+                printTxt "Inside switch statement"
+                printTxt "Arg1: $1"
+                printTxt "Arg2: $2"
+                printTxt "Arg3: $3"
+            }
+        }
+
+        printTxt "argv is: $argv"
+    }
+
+    # Same as above only using $1-9 & argv
+#    set MSG "No arguements entered"
+#    #issue w/argv
+#    puts [llength $argv]
+#    puts $argv
+#
+#
+#        for {set i 1} {$i < 10} {incr i} {
+#             set MSG  "arg $i: "              
+#             append MSG ${$i}
+#             printTxt $MSG
+#        }
+    
+
+    # works w/global declaration
+#    foreach arg $argv {
+#        printTxt $arg
+#    }
+
+#    set argv $::argv
+#    set argc $::argc
+#
+#    printTxt argv
+#    printTxt argc
+
+#    printTxt $1
+
+}
+
 ####################################
-# Variables here
+# Identifiers
 ####################################
 set SRC_DIR [getScriptDirectory]
 set TB_MOD "DUT_tb"
@@ -43,7 +124,9 @@ vmap work work
 vlog -sv -work work ${SRC_DIR}/../DUT/${DUT}.svp
 vlog -sv -work work ${SRC_DIR}/${TB_MOD}.sv
 
-vsim -t 1ns -L work ${TB_MOD}
+# vsim -t 1ns -L work ${TB_MOD} 
+vsim -t 1ns -L work $entity 
+# -do "T1 T2 T3 # do option doesnt work"
 
 do wave.do
 
@@ -64,6 +147,13 @@ echo \n\n
 set curTime 0
 set curTime [expr $curTime + 10]
 run ${curTime}ns
+getArgs
+printTxt $architecture
+printTxt $configuration
+printTxt $entity
+#printTxt $1
+#printTxt $2
+#printTxt $argc
 #printTxt $curTime
 
 # assert reset
