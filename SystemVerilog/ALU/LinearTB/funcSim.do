@@ -129,9 +129,31 @@ echo \n\n
 
 force sim:/DUT_tb/DUT/alu_a_in 8'h4 {@280ns}
 force sim:/DUT_tb/DUT/alu_b_in 8'h4 {@280ns}
-force sim:/DUT_tb/DUT/alu_opcode_in 4'd2 {@280ns}
+force sim:/DUT_tb/DUT/alu_opcode_in 4'd2 {@250ns}
 run {@280ns}
 printTxt "simple case"
 force sim:/DUT_tb/DUT/alu_a_in 8'h0 {@320ns}
 force sim:/DUT_tb/DUT/alu_b_in 8'h0 {@320ns}
 run {@350ns}
+
+force sim:/DUT_tb/DUT/alu_a_in 8'hFF {@350ns}
+force sim:/DUT_tb/DUT/alu_b_in 8'hFF {@350ns}
+force sim:/DUT_tb/DUT/alu_opcode_in 4'd2 {@350ns}
+run {@350ns}
+printTxt "simple case"
+force sim:/DUT_tb/DUT/alu_a_in 8'h0 {@375ns}
+force sim:/DUT_tb/DUT/alu_b_in 8'h0 {@375ns}
+run {@375ns}
+force sim:/DUT_tb/DUT/alu_a_in 8'h0 0
+force sim:/DUT_tb/DUT/alu_b_in 8'h0 0
+run {@400ns}
+
+puts "\n\n"
+echo \n\n
+set string "Running simulation for division"
+printTxt $separator
+printTxt $string
+printTxt $separator
+puts "\n\n"
+echo \n\n
+
