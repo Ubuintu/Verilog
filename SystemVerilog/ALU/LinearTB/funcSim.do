@@ -69,21 +69,21 @@ run ${curTime}ns
 # assert reset
 force -deposit sim:/DUT_tb/DUT/reset 1 0
 set curTime [expr $curTime + 20]
-run {@${curTime}ns} 
+run @${curTime}ns 
 # 30ns
 #printTxt $curTime
 
 # demonstrating force with deposit option; note: deposit will drive a value and hold it until it is overwritten by anything
-# WIP; currently doesnt like the lines 76-80
-## force -deposit sim:/DUT_tb/DUT/alu_a_in 0 {@${curTime}ns} 
-## set curTime [expr $curTime + 5]
-## force -deposit sim:/DUT_tb/DUT/alu_b_in 0 {@${curTime}ns} 
-## set curTime [expr $curTime + 5]
-## force -deposit sim:/DUT_tb/DUT/alu_opcode_in 0 {@${curTime}ns} 
-force -deposit sim:/DUT_tb/DUT/alu_a_in 0 {@30ns}
-force -deposit sim:/DUT_tb/DUT/alu_b_in 0 {@35ns}
-force -deposit sim:/DUT_tb/DUT/alu_opcode_in 0 {@40ns}
-run {@ 50 ns}
+force -deposit sim:/DUT_tb/DUT/alu_a_in 0 @${curTime}ns 
+set curTime [expr $curTime + 5]
+force -deposit sim:/DUT_tb/DUT/alu_b_in 0 @${curTime}ns 
+set curTime [expr $curTime + 5]
+force -deposit sim:/DUT_tb/DUT/alu_opcode_in 0 @${curTime}ns 
+
+# force -deposit sim:/DUT_tb/DUT/alu_a_in 0 {@30ns}
+# force -deposit sim:/DUT_tb/DUT/alu_b_in 0 {@35ns}
+# force -deposit sim:/DUT_tb/DUT/alu_opcode_in 0 {@40ns}
+# run {@ 50 ns}
 
 run {@200ns}
 force -deposit sim:/DUT_tb/DUT/reset 0 
@@ -146,7 +146,7 @@ force sim:/DUT_tb/DUT/alu_b_in 8'h0 {@375ns}
 run {@375ns}
 force sim:/DUT_tb/DUT/alu_a_in 8'h0 0
 force sim:/DUT_tb/DUT/alu_b_in 8'h0 0
-run {@400ns}
+run {@420ns}
 
 puts "\n\n"
 echo \n\n
@@ -157,3 +157,11 @@ printTxt $separator
 puts "\n\n"
 echo \n\n
 
+force sim:/DUT_tb/DUT/alu_a_in 8'h0F 0
+force sim:/DUT_tb/DUT/alu_b_in 8'h03 0
+force sim:/DUT_tb/DUT/alu_opcode_in 4'd3 0 
+run {@450ns}
+printTxt "simple case"
+force sim:/DUT_tb/DUT/alu_a_in 8'h0 0
+force sim:/DUT_tb/DUT/alu_b_in 8'h0 0
+run 10

@@ -11,7 +11,7 @@ cModel Technology
 Z0 d/home/ubuintu/Documents/Verilog/SystemVerilog/ALU/LinearTB
 valu
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1652505799
+Z2 !s110 1652506465
 !i10b 1
 !s100 X=j=O``TGUlY9WdBeHzG@1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -29,12 +29,12 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1652505799.000000
+!s108 1652506464.000000
 !s107 ./../DUT/alu_simple_bugs_enc2.svp|
 !s90 -reportprogress|300|-sv|-work|work|./../DUT/alu_simple_bugs_enc2.svp|
 !i113 1
-Z7 o-sv -work work
-Z8 tCvgOpt 0
+Z6 o-sv -work work
+Z7 tCvgOpt 0
 vDUT_tb
 R1
 R2
@@ -54,10 +54,10 @@ R5
 r1
 !s85 0
 31
-R6
+!s108 1652506465.000000
 !s107 ./DUT_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|./DUT_tb.sv|
 !i113 1
+R6
 R7
-R8
 n@d@u@t_tb
