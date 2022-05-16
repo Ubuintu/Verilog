@@ -1,0 +1,583 @@
+pwd
+# /home/ubuintu/Documents/Verilog/SystemVerilog/ALU
+ls
+# Documents
+# DUT
+# LinearTB
+# transcript
+# Verification
+cd Verification
+vlib work
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:58:45 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp 
+# -- Compiling module alu
+# ** Warning: /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# 
+# Top level modules:
+# 	alu
+# End time: 22:58:45 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:58:45 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv 
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# 
+# Top level modules:
+# 	dut_top
+# End time: 22:58:45 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/interface.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:58:45 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/interface.sv 
+# -- Compiling interface intf
+# 
+# Top level modules:
+# 	--none--
+# End time: 22:58:45 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:58:45 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv 
+# -- Compiling interface intf
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv(9)
+# ** while parsing file included at testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# -- Compiling program testbench
+# -- Compiling module tbench_top
+# 
+# Top level modules:
+# 	tbench_top
+# End time: 22:58:45 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:58:45 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv 
+# -- Compiling interface intf
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# -- Compiling program testbench
+# 
+# Top level modules:
+# 	dut_top
+# 	testbench
+# End time: 22:58:45 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:14:08 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp 
+# -- Compiling module alu
+# ** Warning: /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# 
+# Top level modules:
+# 	alu
+# End time: 23:14:08 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:14:08 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv 
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# 
+# Top level modules:
+# 	dut_top
+# End time: 23:14:08 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/interface.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:14:08 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/interface.sv 
+# -- Compiling interface intf
+# 
+# Top level modules:
+# 	--none--
+# End time: 23:14:08 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:14:08 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv 
+# -- Compiling interface intf
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv(9)
+# ** while parsing file included at testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# -- Compiling program testbench
+# -- Compiling module tbench_top
+# 
+# Top level modules:
+# 	tbench_top
+# End time: 23:14:08 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:14:08 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv 
+# -- Compiling interface intf
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# -- Compiling program testbench
+# 
+# Top level modules:
+# 	dut_top
+# 	testbench
+# End time: 23:14:08 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:14:33 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp 
+# -- Compiling module alu
+# ** Warning: /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# 
+# Top level modules:
+# 	alu
+# End time: 23:14:33 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:14:33 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv 
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# 
+# Top level modules:
+# 	dut_top
+# End time: 23:14:33 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/interface.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:14:33 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/interface.sv 
+# -- Compiling interface intf
+# 
+# Top level modules:
+# 	--none--
+# End time: 23:14:33 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:14:33 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv 
+# -- Compiling interface intf
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv(9)
+# ** while parsing file included at testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# -- Compiling program testbench
+# -- Compiling module tbench_top
+# 
+# Top level modules:
+# 	tbench_top
+# End time: 23:14:33 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:14:33 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv 
+# -- Compiling interface intf
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# -- Compiling program testbench
+# 
+# Top level modules:
+# 	dut_top
+# 	testbench
+# End time: 23:14:33 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:14:49 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp 
+# -- Compiling module alu
+# ** Warning: /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# 
+# Top level modules:
+# 	alu
+# End time: 23:14:49 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:14:49 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv 
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# 
+# Top level modules:
+# 	dut_top
+# End time: 23:14:49 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/interface.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:14:49 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/interface.sv 
+# -- Compiling interface intf
+# 
+# Top level modules:
+# 	--none--
+# End time: 23:14:49 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:14:49 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv 
+# -- Compiling interface intf
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv(9)
+# ** while parsing file included at testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# -- Compiling program testbench
+# -- Compiling module tbench_top
+# 
+# Top level modules:
+# 	tbench_top
+# End time: 23:14:49 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:14:49 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv 
+# -- Compiling interface intf
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# -- Compiling program testbench
+# 
+# Top level modules:
+# 	dut_top
+# 	testbench
+# End time: 23:14:49 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+ls
+# alu_simple_bugs_enc2.svp
+# dut_top.sv
+# interface.sv
+# tbench_top.sv
+# testbench.sv
+# work
+vlog -sv *.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:19:33 on May 15,2022
+# vlog -reportprogress 300 -sv dut_top.sv interface.sv tbench_top.sv testbench.sv 
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# -- Compiling interface intf
+# ** Warning: ** while parsing file included at tbench_top.sv(8)
+# ** at interface.sv(6): (vlog-2275) Existing interface 'intf' will be overwritten.
+# -- Compiling interface intf
+# ** Warning: ** while parsing file included at tbench_top.sv(9)
+# ** while parsing file included at testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(1): (vlog-2275) Existing module 'alu' will be overwritten.
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at tbench_top.sv(9)
+# ** while parsing file included at testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# ** Warning: ** while parsing file included at tbench_top.sv(9)
+# ** while parsing file included at testbench.sv(8)
+# ** at dut_top.sv(7): (vlog-2275) Existing module 'dut_top' will be overwritten.
+# -- Compiling module dut_top
+# -- Compiling program testbench
+# -- Compiling module tbench_top
+# ** Warning: ** while parsing file included at testbench.sv(6)
+# ** at interface.sv(6): (vlog-2275) Existing interface 'intf' will be overwritten.
+# -- Compiling interface intf
+# ** Warning: ** while parsing file included at testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(1): (vlog-2275) Existing module 'alu' will be overwritten.
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# ** Warning: ** while parsing file included at testbench.sv(8)
+# ** at dut_top.sv(7): (vlog-2275) Existing module 'dut_top' will be overwritten.
+# -- Compiling module dut_top
+# ** Warning: testbench.sv(12): (vlog-2275) Existing program 'testbench' will be overwritten.
+# -- Compiling program testbench
+# 
+# Top level modules:
+# 	tbench_top
+# End time: 23:19:33 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 10
+vlog -sv -work work *.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:19:57 on May 15,2022
+# vlog -reportprogress 300 -sv -work work dut_top.sv interface.sv tbench_top.sv testbench.sv 
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# -- Compiling interface intf
+# ** Warning: ** while parsing file included at tbench_top.sv(8)
+# ** at interface.sv(6): (vlog-2275) Existing interface 'intf' will be overwritten.
+# -- Compiling interface intf
+# ** Warning: ** while parsing file included at tbench_top.sv(9)
+# ** while parsing file included at testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(1): (vlog-2275) Existing module 'alu' will be overwritten.
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at tbench_top.sv(9)
+# ** while parsing file included at testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# ** Warning: ** while parsing file included at tbench_top.sv(9)
+# ** while parsing file included at testbench.sv(8)
+# ** at dut_top.sv(7): (vlog-2275) Existing module 'dut_top' will be overwritten.
+# -- Compiling module dut_top
+# -- Compiling program testbench
+# -- Compiling module tbench_top
+# ** Warning: ** while parsing file included at testbench.sv(6)
+# ** at interface.sv(6): (vlog-2275) Existing interface 'intf' will be overwritten.
+# -- Compiling interface intf
+# ** Warning: ** while parsing file included at testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(1): (vlog-2275) Existing module 'alu' will be overwritten.
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# ** Warning: ** while parsing file included at testbench.sv(8)
+# ** at dut_top.sv(7): (vlog-2275) Existing module 'dut_top' will be overwritten.
+# -- Compiling module dut_top
+# ** Warning: testbench.sv(12): (vlog-2275) Existing program 'testbench' will be overwritten.
+# -- Compiling program testbench
+# 
+# Top level modules:
+# 	tbench_top
+# End time: 23:19:57 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 10
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:20:35 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp 
+# -- Compiling module alu
+# ** Warning: /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# 
+# Top level modules:
+# 	alu
+# End time: 23:20:36 on May 15,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:20:36 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv 
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# 
+# Top level modules:
+# 	dut_top
+# End time: 23:20:36 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/interface.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:20:36 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/interface.sv 
+# -- Compiling interface intf
+# 
+# Top level modules:
+# 	--none--
+# End time: 23:20:36 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:20:36 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv 
+# -- Compiling interface intf
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv(9)
+# ** while parsing file included at testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# -- Compiling program testbench
+# -- Compiling module tbench_top
+# 
+# Top level modules:
+# 	tbench_top
+# End time: 23:20:36 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:20:36 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv 
+# -- Compiling interface intf
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# -- Compiling program testbench
+# 
+# Top level modules:
+# 	dut_top
+# 	testbench
+# End time: 23:20:36 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:35 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv 
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# 
+# Top level modules:
+# 	dut_top
+# End time: 23:29:35 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:44 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv 
+# -- Compiling interface intf
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv(8)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# -- Compiling program testbench
+# 
+# Top level modules:
+# 	dut_top
+# 	testbench
+# End time: 23:29:44 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vdel -all -lib work
+vlib work
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:30:06 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv 
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# 
+# Top level modules:
+# 	dut_top
+# End time: 23:30:06 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:36:36 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv 
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# 
+# Top level modules:
+# 	dut_top
+# End time: 23:36:36 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:50:10 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp 
+# -- Compiling module alu
+# ** Warning: /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# 
+# Top level modules:
+# 	alu
+# End time: 23:50:10 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:50:10 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv 
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# 
+# Top level modules:
+# 	dut_top
+# End time: 23:50:10 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/interface.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:50:10 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/interface.sv 
+# -- Compiling interface intf
+# 
+# Top level modules:
+# 	--none--
+# End time: 23:50:10 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:50:10 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv 
+# -- Compiling interface intf
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/tbench_top.sv(9)
+# ** while parsing file included at testbench.sv(7)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# -- Compiling program testbench
+# -- Compiling module tbench_top
+# 
+# Top level modules:
+# 	tbench_top
+# End time: 23:50:10 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:50:10 on May 15,2022
+# vlog -reportprogress 300 -work work /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv 
+# -- Compiling interface intf
+# -- Compiling module alu
+# ** Warning: ** while parsing file included at /home/ubuintu/Documents/Verilog/SystemVerilog/ALU/Verification/testbench.sv(7)
+# ** while parsing file included at dut_top.sv(4)
+# ** at alu_simple_bugs_enc2.svp(19): (vlog-2250) Function "<protected>" has no return value assignment.
+# -- Compiling module dut_top
+# -- Compiling program testbench
+# 
+# Top level modules:
+# 	dut_top
+# 	testbench
+# End time: 23:50:10 on May 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1

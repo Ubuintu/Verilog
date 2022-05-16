@@ -1,6 +1,9 @@
-`ifndef TB
-`define TB
+`ifndef TB_SV
+`define TB_SV
 //compiler directive; tells compiler to include code IF macro, "TB", is not defined
+
+//compiler directive to include contents of the following file 
+`include "interface.sv"
 
 //Dynamic datatype; the reactive region is one of the last phases before sim advances, by then all design element (module)  statements have been executed and testbench will have the newest values;
 //To avoid race conditions with the design, the program executes DURING the reactive region of the simulation cycle

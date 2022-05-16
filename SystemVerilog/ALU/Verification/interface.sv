@@ -1,5 +1,5 @@
-`ifndef INTERFACE
-`define INTERFACE
+`ifndef INTERFACE_SV
+`define INTERFACE_SV
 //compiler directive
 
 //interface is a SV datatype that encapsulates signals; intfs can implement many SV functionality such as tasks, coverage, etc
