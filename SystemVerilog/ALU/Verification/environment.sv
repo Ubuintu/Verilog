@@ -18,7 +18,10 @@ class environment #(type T=int);
     endfunction
 
 
-    /*---------------tasks---------------*/
+/*===================================
+===============tasks===============
+===================================*/
+
     //unlike funcs, task can return multiple outputs based on its given inputs
     
     task pre_test();
@@ -56,9 +59,17 @@ class environment #(type T=int);
         $finish;
     endtask
 
-
-
-
+    task reset();
+        //wait for vif.reset to be asserted
+        wait(vif.reset);
+        $display("[%0d | ENV] ----- Reset asserted ----- ",$time);
+        //non-blocking assignment
+        vif.a_in <= 0;
+        vif.b_in <= 0;
+        //vif.op_in <= 0; //uncomment for now, see what opcode resets to
+        wait(!vif.reset); //wait for deassertion
+        $display("[%0d | ENV] ----- Reset deasserted ----- ",$time);
+    endtask
 
 
 endclass
