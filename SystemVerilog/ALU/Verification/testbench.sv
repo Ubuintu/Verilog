@@ -6,11 +6,14 @@
 `include "interface.sv"
 `include "testbench.sv"
 `include "dut_top.sv"
+`include "environment.sv"
 
 //top module instanties tb components such as the program, the DUT, & interface
+//!!THIS MODULE IS CME435 TBENCH_TOP!!
 module testbench #( parameter PERIOD=10 );
     //signal declaration
     bit clk, reset;
+
 
     //clk gen
     initial  
@@ -39,16 +42,27 @@ endmodule
 //Dynamic datatype; the reactive region is one of the last phases before sim advances, by then all design element (module)  statements have been executed and testbench will have the newest values;
 //To avoid race conditions with the design, the program executes DURING the reactive region of the simulation cycle
 program test_prog(intf dut_intf);   //for simple DUTS, one inteface is good enough for encapsulation
+//!!THIS MODULE IS CME435 TESTBENCH!!
 
 initial begin
+
+    //declaring environment instance
+    environment env;
+
+    //initialize environment instance
+    env = new(dut_intf);
+
     $display("===========================================================================================");
-    $display("===================================== Start of test =======================================");
-    $display("===========================================================================================");
+    $display("===================================== Start of verification =======================================");
+    $display("===========================================================================================\n\n");
+
+    //calling environment run() method
+    env.run();
 end
 
 initial begin
-    $display("===========================================================================================");
-    $display("====================================== End of test ========================================");
+    $display("\n\n===========================================================================================");
+    $display("====================================== End of verification ========================================");
     $display("===========================================================================================");
 end
 
