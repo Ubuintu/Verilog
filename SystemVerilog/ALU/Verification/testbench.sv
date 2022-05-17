@@ -31,8 +31,8 @@ module testbench #( parameter PERIOD=10 );
         #(PERIOD) reset=0;
     end
 
-    //verifiy base class
-    test_transactionIn_class tbb();
+    //verify base class
+    //test_transactionIn_class tbb();
 
     //Instantiate testbench's components
     intf dut_intf (.*);     //.name port connection
@@ -59,6 +59,12 @@ initial begin
 
     //initialize environment instance
     env = new(dut_intf);
+
+    //initialize counter for repeating rand inputs
+    env.gen.rpt_cnt = 5;
+
+    //enable/disable debug mode
+    env.gen.debug=debug;
 
     $display("===========================================================================================");
     $display("===================================== Start of verification =======================================");

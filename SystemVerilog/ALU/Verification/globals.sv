@@ -6,7 +6,7 @@
 package globals;
     
     //global flag 
-    const int debug = 0;
+    const int debug = 1;
 
     //"enum" defines a set of named values
     //"typedef" creates a user-defined datatype from existing datatypes

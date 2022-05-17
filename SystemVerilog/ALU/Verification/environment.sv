@@ -3,10 +3,16 @@
 
 //compiler directive to include contents of the following file 
 `include "interface.sv"
+`include "generator.sv"
+`include "globals.sv"
+import globals::*;
 
 //environment is another abstract testbench layer that encapsulates components within an controlled environment that can be reconfigured for better flexibility & validation
 //parameterized environment to be instantiated for different classes ex: testcases
-class environment #(type T=int);
+class environment #(type T=transactionIn);
+
+    //testbench component instances
+    generator #(T) gen;
 
     //virtual declaration allows datatype to be a ptr; used to connect actual DUT
     virtual intf vif;
@@ -15,6 +21,9 @@ class environment #(type T=int);
     function new (virtual intf vif);
         //get interface from testbench
         this.vif = vif;
+
+        //init components
+        gen=new();
     endfunction
 
 
