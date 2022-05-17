@@ -14,6 +14,9 @@ class environment #(type T=transactionIn);
     //testbench component instances
     generator #(T) gen;
 
+    //mailbox handle's
+    mailbox gen2driv;
+
     //virtual declaration allows datatype to be a ptr; used to connect actual DUT
     virtual intf vif;
 
@@ -22,8 +25,12 @@ class environment #(type T=transactionIn);
         //get interface from testbench
         this.vif = vif;
 
+        //mailbox to be shared across testbench
+        gen2driv=new();
+        
         //init components
-        gen=new();
+        gen=new(gen2driv);
+
     endfunction
 
 

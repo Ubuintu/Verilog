@@ -11,6 +11,12 @@ class generator #(type T = transactionIn);
     int transNo=0;
     string msg ="[ Generator transaction: ";
     string cat;
+    mailbox gen2driv;
+
+    //constructor
+    function new(mailbox gen2driv);
+        this.gen2driv=gen2driv;
+    endfunction
 
     //declare transaction class
     rand T transIn;
@@ -25,6 +31,7 @@ class generator #(type T = transactionIn);
                 msg={msg, cat, " ]"};
                 transIn.display(msg);
             end
+            gen2driv.put(transIn);
             transNo++;
         end
     endtask
