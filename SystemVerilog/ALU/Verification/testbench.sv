@@ -7,6 +7,10 @@
 `include "testbench.sv"
 `include "dut_top.sv"
 `include "environment.sv"
+`include "globals.sv"
+
+//import <scope_resolution_oper> <scope>; "*" specifies to use all items inside
+import globals::*;
 
 //top module instanties tb components such as the program, the DUT, & interface
 //!!THIS MODULE IS CME435 TBENCH_TOP!!
@@ -27,10 +31,14 @@ module testbench #( parameter PERIOD=10 );
         #(PERIOD) reset=0;
     end
 
+    //verifiy base class
+    test_transactionIn_class tbb();
+
     //Instantiate testbench's components
     intf dut_intf (.*);     //.name port connection
     test_prog tb(dut_intf); //interface handle is passed as a parameter
     dut_top dut(dut_intf);
+    
 
     //enable wave dump
     initial begin
@@ -67,4 +75,21 @@ initial begin
 end
 
 endprogram
+
+program test_transactionIn_class;
+
+//transactionIn trans;
+transactionMult trans;  //verify enum works
+
+initial begin
+    trans=new();
+    repeat(10) begin
+        trans.randomize();
+        trans.display("[Testing Transaction class]");
+    end
+    $finish;
+end
+
+endprogram
+
 `endif
