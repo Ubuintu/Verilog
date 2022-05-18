@@ -8,6 +8,7 @@ package globals;
     //global flag 
     const int debug = 1;
     const int repeat_counter = 10;
+    int total_cc_per_op = repeat_counter;
 
     //"enum" defines a set of named values
     //"typedef" creates a user-defined datatype from existing datatypes
@@ -48,6 +49,7 @@ package globals;
                                   XNOR: "Logical XNOR",
                                   GRThan: "A > B",
                                   EQL: "A = B"};
+
 
     
     //transaction for DUT inputs & outputs

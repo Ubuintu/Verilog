@@ -39,14 +39,14 @@ class monitor;
 
             cat.itoa(transNo);
             msg ="[ Monitor transaction: ";
+            @(vif.cb_mon);
             if(debug) begin
                 msg={msg, cat, " ]"};
-                @(vif.cb_mon);
                 trans2scb.display(msg);
             end
             transNo++;
 
-            if (transNo==repeat_counter)    //uses a blocking trigger
+            if (transNo==total_cc_per_op)    //uses a blocking trigger
                 -> end_mon;    
         end
     endtask
