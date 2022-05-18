@@ -37,13 +37,6 @@ class driver;
             //blocking method
             gen2driv.get(trans2DUT);
           
-            cur_op=ADD;
-            cmp_op=ADD;
-            cur_op=cmp_in.next(trans2DUT.op_in);
-            $display("cur_op is: %s",cur_op.name());
-            $display("cmp is: %s",cmp_op.name());
-            
-
             //drive transaction from obtained from gen into virtual interface using timing described in cb encapsulated in interface
             //@(posedge vif.cb_driv);
             vif.M_DRV.a_in <= trans2DUT.a_in;
@@ -51,6 +44,18 @@ class driver;
             vif.M_DRV.op_in <= trans2DUT.op_in;
             trans2DUT.reset <= $root.testbench.reset;
 
+            /*
+            if (trans2DUT.op_in==4'd2) begin
+                total_cc_per_op++;
+                $display("val: %d",total_cc_per_op);
+                $display("Multiplication");
+            end
+            else if (trans2DUT.op_in==4'd3) begin
+                total_cc_per_op=total_cc_per_op+2;
+                $display("val: %d",total_cc_per_op);
+                $display("Division");
+            end
+            */
             cat.itoa(transNo);
             msg ="[ Driver transaction: ";
             if(debug) begin

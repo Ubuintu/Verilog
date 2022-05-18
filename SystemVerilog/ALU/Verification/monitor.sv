@@ -33,6 +33,7 @@ class monitor;
             trans2scb=new();
             trans2scb.y_out<=vif.M_MON.y_out;
             trans2scb.co_out<=vif.M_MON.co_out;
+            //$display("%d",total_cc_per_op);
 
             //send transaction to scb via mailbox
             mon2scb.put(trans2scb);

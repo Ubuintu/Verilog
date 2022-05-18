@@ -11,8 +11,8 @@ import globals::*;
 
 //environment is another abstract testbench layer that encapsulates components within an controlled environment that can be reconfigured for better flexibility & validation
 //parameterized environment to be instantiated for different classes ex: testcases
-//class environment #(type T=transactionIn);
-class environment #(type T=transactionAdd); //for debugging monitor
+class environment #(type T=transactionIn);
+//class environment #(type T=transactionAdd); //for debugging monitor
 
     //testbench component instances
     generator #(T) gen;
