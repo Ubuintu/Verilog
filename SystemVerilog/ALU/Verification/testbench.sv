@@ -37,7 +37,7 @@ module testbench #( parameter PERIOD=10 );
     //Instantiate testbench's components
     intf dut_intf (.*);     //.name port connection
     test_prog tb(dut_intf); //interface handle is passed as a parameter
-    dut_top dut(dut_intf);
+    dut_top dut(dut_intf.M_DUT);
     
 
     //enable wave dump
@@ -81,7 +81,7 @@ final begin
 end
 
 endprogram
-
+/*
 program test_transactionIn_class;
 
 //transactionIn trans;
@@ -97,5 +97,5 @@ initial begin
 end
 
 endprogram
-
+*/
 `endif

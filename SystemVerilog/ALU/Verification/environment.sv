@@ -4,6 +4,7 @@
 //compiler directive to include contents of the following file 
 `include "interface.sv"
 `include "generator.sv"
+`include "driver.sv"
 `include "globals.sv"
 import globals::*;
 
@@ -13,6 +14,7 @@ class environment #(type T=transactionIn);
 
     //testbench component instances
     generator #(T) gen;
+    driver drv;
 
     //mailbox handle's
     mailbox gen2driv;
@@ -30,6 +32,7 @@ class environment #(type T=transactionIn);
         
         //init components
         gen=new(gen2driv);
+        drv=new(vif,gen2driv);
 
     endfunction
 
@@ -53,6 +56,11 @@ class environment #(type T=transactionIn);
         $display("\n\n===============================================================");
         $display("%0d : Environment : starting verification stage", $time);
         $display("===============================================================\n\n");
+        //fork join creates parallel threads; join waits for all parallel threads to finish
+        fork
+            gen.main();
+            drv.main();
+        join
         $display("\n\n===============================================================");
         $display("%0d : Environment : end of verification stage", $time);
         $display("===============================================================\n\n");

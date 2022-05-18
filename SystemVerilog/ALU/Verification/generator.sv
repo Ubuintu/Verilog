@@ -25,6 +25,7 @@ class generator #(type T = transactionIn);
     task main();
         repeat(rpt_cnt) begin
             transIn = new();
+            msg ="[ Generator transaction: ";
             cat.itoa(transNo);
             if(!transIn.randomize()) $fatal("Gen:: trans randomization failed");
             if(debug) begin
