@@ -25,13 +25,12 @@ class monitor;
     endfunction
 
     task main();
-        //Delay for inital reset/setup
-        repeat(1) @(vif.cb_mon);
+        //Delay for 2 clock cycles for inital reset
+      repeat(1) @(vif.cb_mon);
 
         forever begin
             transactionOut trans2scb;
             trans2scb=new();
-            @(vif.cb_mon);
             trans2scb.y_out<=vif.M_MON.y_out;
             trans2scb.co_out<=vif.M_MON.co_out;
 
