@@ -47,6 +47,15 @@ module testbench #( parameter PERIOD=10 );
         $dumpfile("dump.vcd"); $dumpvars;
     end
 
+    //task for resetting DUT
+    task rstDUT();
+        reset=1;
+    endtask
+
+    task endRst();
+        reset=0;
+    endtask
+
 endmodule
 
 //Dynamic datatype; the reactive region is one of the last phases before sim advances, by then all design element (module)  statements have been executed and testbench will have the newest values;

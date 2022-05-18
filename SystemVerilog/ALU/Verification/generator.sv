@@ -30,6 +30,7 @@ class generator #(type T = transactionIn);
             msg ="[ Generator transaction: ";
             cat.itoa(transNo);
             if(!transIn.randomize()) $fatal("Gen:: trans randomization failed");
+            transIn.reset <= $root.testbench.reset;
             if(debug) begin
                 msg={msg, cat, " ]"};
                 transIn.display(msg);

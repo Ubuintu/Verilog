@@ -80,6 +80,7 @@ class environment #(type T=transactionIn);
     endtask
 
     task run();
+        reset();
         pre_test();
         test();
         post_test();
@@ -88,6 +89,7 @@ class environment #(type T=transactionIn);
     endtask
 
     task reset();
+        $root.testbench.rstDUT();
         //wait for vif.reset to be asserted
         wait(vif.reset);
         $display("[%0d | ENV] ----- Reset asserted ----- ",$time);
@@ -95,6 +97,7 @@ class environment #(type T=transactionIn);
         vif.a_in <= 0;
         vif.b_in <= 0;
         //vif.op_in <= 0; //uncomment for now, see what opcode resets to
+        $root.testbench.endRst();
         wait(!vif.reset); //wait for deassertion
         $display("[%0d | ENV] ----- Reset deasserted ----- ",$time);
     endtask
