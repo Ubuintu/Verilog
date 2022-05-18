@@ -5,19 +5,23 @@
 `include "interface.sv"
 `include "generator.sv"
 `include "driver.sv"
+`include "monitor.sv"
 `include "globals.sv"
 import globals::*;
 
 //environment is another abstract testbench layer that encapsulates components within an controlled environment that can be reconfigured for better flexibility & validation
 //parameterized environment to be instantiated for different classes ex: testcases
-class environment #(type T=transactionIn);
+//class environment #(type T=transactionIn);
+class environment #(type T=transactionAdd); //for debugging monitor
 
     //testbench component instances
     generator #(T) gen;
     driver drv;
+    monitor mon;
 
     //mailbox handle's
     mailbox gen2driv;
+    mailbox mon2scb;
 
     //virtual declaration allows datatype to be a ptr; used to connect actual DUT
     virtual intf vif;
@@ -29,10 +33,12 @@ class environment #(type T=transactionIn);
 
         //mailbox to be shared across testbench
         gen2driv=new();
+        mon2scb=new();
         
         //init components
         gen=new(gen2driv);
         drv=new(vif,gen2driv);
+        mon=new(vif,mon2scb);
 
     endfunction
 
@@ -60,15 +66,17 @@ class environment #(type T=transactionIn);
         fork
             gen.main();
             drv.main();
+            mon.main();
         //join
         join_any      //!!! sim will get stuck using "join" from driver's "forever begin"
         //@(gen.end_gen); //syntax to wait for event trigger; edge-sensitive trigger
         wait(gen.end_gen.triggered);    //level sensitive trigger; is event triggered RIGHT NOW?
-        @(vif.cb_driv);
-        $root.testbench.rstDUT;
-        @(vif.cb_driv);
-        $root.testbench.endRst;
+        //@(vif.cb_driv);
+        //$root.testbench.rstDUT;
+        //@(vif.cb_driv);
+        //$root.testbench.endRst;
         wait(drv.end_driv.triggered);
+        wait(mon.end_mon.triggered);
         $display("\n\n===============================================================");
         $display("%0d : Environment : end of verification stage", $time);
         $display("===============================================================\n\n");

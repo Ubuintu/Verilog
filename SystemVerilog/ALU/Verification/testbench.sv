@@ -80,6 +80,7 @@ initial begin
     //enable/disable debug mode
     env.gen.debug=debug;
     env.drv.debug=debug;
+    env.mon.debug=debug;
 
     $display("===========================================================================================");
     $display("===================================== Start of verification =======================================");

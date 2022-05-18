@@ -4,7 +4,15 @@
 `include "globals.sv"
 import globals::*;
 
-class monitor
+class monitor;
+
+    //driver properties
+    int debug;
+    int transNo=0;
+    string msg ="[ Monitor transaction: ";
+    string cat;
+    event end_mon;
+
     //virtual intf handle
     virtual intf vif;
     //mailbox
@@ -17,10 +25,30 @@ class monitor
     endfunction
 
     task main();
+        //Delay for inital reset/setup
+        repeat(1) @(vif.cb_mon);
+
         forever begin
             transactionOut trans2scb;
             trans2scb=new();
-            trans2scb.y_out=vif.
+            @(vif.cb_mon);
+            trans2scb.y_out<=vif.M_MON.y_out;
+            trans2scb.co_out<=vif.M_MON.co_out;
+
+            //send transaction to scb via mailbox
+            mon2scb.put(trans2scb);
+
+            cat.itoa(transNo);
+            msg ="[ Monitor transaction: ";
+            if(debug) begin
+                msg={msg, cat, " ]"};
+                @(vif.cb_mon);
+                trans2scb.display(msg);
+            end
+            transNo++;
+
+            if (transNo==repeat_counter)    //uses a blocking trigger
+                -> end_mon;    
         end
     endtask
     
