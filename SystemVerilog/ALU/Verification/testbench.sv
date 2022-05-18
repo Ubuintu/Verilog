@@ -18,6 +18,8 @@ module testbench #( parameter PERIOD=10 );
     //signal declaration
     bit clk, reset;
 
+    //using $root, refers to top lvl module in hierarchical path
+    int root_num=5;
 
     //clk gen
     initial  
@@ -61,10 +63,11 @@ initial begin
     env = new(dut_intf);
 
     //initialize counter for repeating rand inputs
-    env.gen.rpt_cnt = 5;
+    env.gen.rpt_cnt = repeat_counter ;
 
     //enable/disable debug mode
     env.gen.debug=debug;
+    env.drv.debug=debug;
 
     $display("===========================================================================================");
     $display("===================================== Start of verification =======================================");

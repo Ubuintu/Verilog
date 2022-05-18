@@ -12,6 +12,8 @@ class generator #(type T = transactionIn);
     string msg ="[ Generator transaction: ";
     string cat;
     mailbox gen2driv;
+    //events are static objects handles used to synchronize threads
+    event end_gen;
 
     //constructor
     function new(mailbox gen2driv);
@@ -35,6 +37,10 @@ class generator #(type T = transactionIn);
             gen2driv.put(transIn);
             transNo++;
         end
+        
+        //syntax for triggering event
+        -> end_gen;
+
     endtask
         
 

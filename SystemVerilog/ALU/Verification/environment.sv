@@ -60,7 +60,11 @@ class environment #(type T=transactionIn);
         fork
             gen.main();
             drv.main();
-        join
+        //join
+        join_any      //!!! sim will get stuck using "join" from driver's "forever begin"
+        //@(gen.end_gen); //syntax to wait for event trigger; edge-sensitive trigger
+        wait(gen.end_gen.triggered);    //level sensitive trigger; is event triggered RIGHT NOW?
+        wait(drv.end_driv.triggered);
         $display("\n\n===============================================================");
         $display("%0d : Environment : end of verification stage", $time);
         $display("===============================================================\n\n");

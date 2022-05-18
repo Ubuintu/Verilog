@@ -7,6 +7,7 @@ package globals;
     
     //global flag 
     const int debug = 1;
+    const int repeat_counter = 10;
 
     //"enum" defines a set of named values
     //"typedef" creates a user-defined datatype from existing datatypes
@@ -60,7 +61,7 @@ package globals;
       function void display(string name);
         $display("\n=================================================================");
         $display("= %s | time: %0d", name, $time);
-        $display("= alu_a_in = %0h, alu_b_in = %0h, reset = %0d, alu_opcode_in = %s", a_in, b_in, reset, operation[op.next(op_in)]);
+        $display("= alu_a_in = %0h\n= alu_b_in = %0h\n= reset = %0d\n= alu_opcode_in = %s", a_in, b_in, reset, operation[op.next(op_in)]);
         $display("=================================================================\n");
       endfunction
       
@@ -73,7 +74,7 @@ package globals;
       function void display(string name);
         $display("\n=================================================================");
         $display("= %s | time: %0d", name, $time);
-        $display("= alu_y_out = %0h, alu_co_out = %0d", y, carry_out);
+        $display("= alu_y_out = %0h\n= alu_co_out = %0d", y, carry_out);
         $display("=================================================================\n");
       endfunction
       

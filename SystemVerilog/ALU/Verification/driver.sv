@@ -12,6 +12,7 @@ class driver;
     int transNo=0;
     string msg ="[ Driver transaction: ";
     string cat;
+    event end_driv;
 
     //creating virtual interface handle
     virtual intf vif;
@@ -35,19 +36,25 @@ class driver;
             gen2driv.get(trans2DUT);
 
             //drive transaction from obtained from gen into virtual interface using timing described in cb encapsulated in interface
-            //@(posedge vif.cb_driv);
+            @(posedge vif.cb_driv);
             vif.cb_driv.a_in <= trans2DUT.a_in;
             vif.cb_driv.b_in <= trans2DUT.b_in;
             vif.cb_driv.op_in <= trans2DUT.op_in;
             vif.cb_driv.reset <= trans2DUT.reset;
 
-            cat.itoa(transNo);msg ="[ Driver transaction: ";
+            cat.itoa(transNo);
+            msg ="[ Driver transaction: ";
             if(debug) begin
                 msg={msg, cat, " ]"};
                 @(posedge vif.cb_driv);
                 trans2DUT.display(msg);
             end
             transNo++;
+
+            //if (transNo==$root.tesetbench.tb.env.gen.rpt_cnt)    //not working
+            //if (transNo==$root.testbench.root_num)    //works; need to get this to reference rpt in gen
+            if (transNo==repeat_counter)    //uses a blocking trigger
+                -> end_driv;    
         end
     endtask
 
