@@ -68,13 +68,13 @@ package globals;
     endclass
 
     class transactionOut;
-      logic [7:0] y;
-      logic carry_out;
+      logic [7:0] y_out;
+      logic co_out;
       
       function void display(string name);
         $display("\n=================================================================");
         $display("= %s | time: %0d", name, $time);
-        $display("= alu_y_out = %0h\n= alu_co_out = %0d", y, carry_out);
+        $display("= alu_y_out = %0h\n= alu_co_out = %0d", y_out, co_out);
         $display("=================================================================\n");
       endfunction
       

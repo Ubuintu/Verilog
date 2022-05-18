@@ -64,6 +64,10 @@ class environment #(type T=transactionIn);
         join_any      //!!! sim will get stuck using "join" from driver's "forever begin"
         //@(gen.end_gen); //syntax to wait for event trigger; edge-sensitive trigger
         wait(gen.end_gen.triggered);    //level sensitive trigger; is event triggered RIGHT NOW?
+        @(vif.cb_driv);
+        $root.testbench.rstDUT;
+        @(vif.cb_driv);
+        $root.testbench.endRst;
         wait(drv.end_driv.triggered);
         $display("\n\n===============================================================");
         $display("%0d : Environment : end of verification stage", $time);
@@ -90,6 +94,7 @@ class environment #(type T=transactionIn);
 
     task reset();
         $root.testbench.rstDUT();
+        @(vif.cb_driv);
         //wait for vif.reset to be asserted
         wait(vif.reset);
         $display("[%0d | ENV] ----- Reset asserted ----- ",$time);
@@ -97,6 +102,7 @@ class environment #(type T=transactionIn);
         vif.a_in <= 0;
         vif.b_in <= 0;
         //vif.op_in <= 0; //uncomment for now, see what opcode resets to
+        @(vif.cb_driv);
         $root.testbench.endRst();
         wait(!vif.reset); //wait for deassertion
         $display("[%0d | ENV] ----- Reset deasserted ----- ",$time);

@@ -28,10 +28,13 @@ module testbench #( parameter PERIOD=10 );
     always #(PERIOD/2) clk=~clk;
 
     //rst gen
-    initial begin
-        reset=1;
-        #(PERIOD) reset=0;
-    end
+    //initial begin
+    //    reset=1;
+    //    #(PERIOD) reset=0;
+    //end
+
+    initial
+        reset=0;
 
     //verify base class
     //test_transactionIn_class tbb();

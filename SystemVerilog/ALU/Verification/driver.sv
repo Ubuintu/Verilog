@@ -36,11 +36,11 @@ class driver;
             gen2driv.get(trans2DUT);
 
             //drive transaction from obtained from gen into virtual interface using timing described in cb encapsulated in interface
-            @(posedge vif.cb_driv);
-            vif.cb_driv.a_in <= trans2DUT.a_in;
-            vif.cb_driv.b_in <= trans2DUT.b_in;
-            vif.cb_driv.op_in <= trans2DUT.op_in;
-            vif.cb_driv.reset <= trans2DUT.reset;
+            //@(posedge vif.cb_driv);
+            vif.M_DRV.a_in <= trans2DUT.a_in;
+            vif.M_DRV.b_in <= trans2DUT.b_in;
+            vif.M_DRV.op_in <= trans2DUT.op_in;
+            trans2DUT.reset <= $root.testbench.reset;
 
             cat.itoa(transNo);
             msg ="[ Driver transaction: ";
